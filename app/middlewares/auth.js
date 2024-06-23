@@ -26,7 +26,7 @@ export const decodeToken = async (req) => {
   try {
     decoded = await decode({
       token,
-      secret: "secret",
+      secret: process.env.SECRET,
     });
   } catch (error) {}
 
@@ -44,7 +44,7 @@ const auth = () => async (req, res, next) => {
     try {
       await decode({
         token,
-        secret: "secret",
+        secret: process.env.SECRET,
       });
       resolve();
     } catch (error) {

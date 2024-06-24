@@ -10,7 +10,7 @@ const app = express();
 const corsOptions = {
   origin: [
     "http://localhost:3000",
-    "https://book-review-frontend-navy.vercel.app/",
+    "https://book-review-frontend-navy.vercel.app",
   ],
   default: "http://localhost:3000",
 };

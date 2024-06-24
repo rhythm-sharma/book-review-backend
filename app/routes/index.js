@@ -2,6 +2,7 @@ import express from "express";
 import authRoute from "./auth.route.js";
 import bookRoute from "./book.route.js";
 import reviewRoute from "./review.route.js";
+import healthRoute from "./health.route.js";
 
 const router = express.Router();
 
@@ -17,6 +18,10 @@ const defaultRoutes = [
   {
     path: "/review",
     route: reviewRoute,
+  },
+  {
+    path: "/health",
+    route: healthRoute,
   },
 ];
 
